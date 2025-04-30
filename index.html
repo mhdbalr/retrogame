@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta charset="UTF-8">
-    <title>Retro Game Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Retro Game Console</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-      
-    <!-- Musik -->
-  <audio id="bgm" src="music.mp3" loop></audio>
-  <button id="musicBtn">🎵</button>
+    <!-- Musik background -->
+<audio id="bgMusic" src="music.mp3" loop></audio>
+<button id="musicToggle">🔊</button>
 
-      
-    <audio autoplay loop>
-        <source src="music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+  <div class="background-pattern"></div>
 
-    <h1>🎮 Selamat Datang di RetroVerse!</h1>
-    <p>Masuki dunia retro yang seru dan penuh warna ✨</p>
+  <div class="console">
+    <div class="header">
+      <span class="power">🔴 POWER</span>
+      <span class="model">RETRO-BOY</span>
+    </div>
 
-    <a href="page1.html" class="button">🕹️ Mainkan Tetris!</a>
-    <a href="page2.html" class="button">🌟 Level 2</a>
-    <a href="page3.html" class="button">🚀 Level 3</a>
-    <a href="page4.html" class="button">🧩 Level 4</a>
+    <div class="screen">
+      <p class="title">Happy<br>Birthday!</p>
+      <p class="subtitle">Press Start Button</p>
+    </div>
+
+    <div class="main-buttons">
+      <a href="#" class="btn blue">MESSAGE</a>
+      <a href="#" class="btn red">GALLERY</a>
+      <a href="#" class="btn purple">MUSIC</a>
+      <a href="#" class="btn green">TETRIS</a>
+    </div>
+
+    <div class="controller">
+      <div class="dpad">
+        <div class="vert"></div>
+        <div class="horiz"></div>
+      </div>
+      <div class="ab-buttons">
+        <div class="circle red-btn">A</div>
+        <div class="circle red-btn">B</div>
+      </div>
+    </div>
+  </div>
+  <!-- ... semua konten halaman kamu ... -->
+
+<script>
+  const music = document.getElementById('bgMusic');
+  const toggleBtn = document.getElementById('musicToggle');
+
+  let isPlaying = false;
+
+  toggleBtn.addEventListener('click', () => {
+    if (!isPlaying) {
+      music.play();
+      toggleBtn.textContent = '🔈';
+    } else {
+      music.pause();
+      toggleBtn.textContent = '🔊';
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
 </body>
 </html>

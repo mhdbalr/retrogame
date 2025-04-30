@@ -1,0 +1,73 @@
+/* Menggunakan font retro dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    font-family: 'Press Start 2P', cursive;
+    color: #00ffcc;
+    text-align: center;
+    padding: 50px;
+    background-image: url('https://www.transparenttextures.com/patterns/pixel-weave.png');
+    background-size: cover;
+    background-position: center;
+}
+
+h1, p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ff0080;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    text-decoration: none;
+    border: 4px solid #00ffff;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 0 10px #00ffff;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff66b2;
+    transform: scale(1.1);
+}
+
+/* Animasi tombol */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.button:active {
+    animation: pulse 0.5s ease-in-out;
+}
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #800080; /* Warna ungu */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .music-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  body {
+    background-image: url('retro-img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+  }
+  
